@@ -55,7 +55,9 @@ public class SKBrowserControlsView: UIView {
             skBrowser = p_skBrowser
             var backButtonImage = UIImage()
            // backButtonImage = UIImage(named: "BackButton.png")
-            backButton = UIBarButtonItem(image: UIImage(named: "BackButton.png"),
+            let image1 = UIImage(named: "BackButton.png", in: Bundle(for: SKBrowserControlsView.self), compatibleWith: nil)
+
+            backButton = UIBarButtonItem(image: image1,
                                           style: .bordered,
                                           target: self,
                                           action: #selector(back))
@@ -63,8 +65,13 @@ public class SKBrowserControlsView: UIView {
             flexBack = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.flexibleSpace, target: nil, action: nil)
 
             var forwardButtonImage = UIImage()
+            // let image = UIImage(named: "YourImage", in: Bundle(for: YOURFRAMEWORKCLASS.self), compatibleWith: nil)
+             let image2 = UIImage(named: "ForwardButton.png", in: Bundle(for: SKBrowserControlsView.self), compatibleWith: nil)
+
             //forwardButtonImage = UIImage(named: "ForwardButton.png")!
-            forwardButton = UIBarButtonItem(image: UIImage(named: "ForwardButton.png"), style: .bordered, target: self, action: #selector(forward))
+           // forwardButton = UIBarButtonItem(image: UIImage(named: "ForwardButton.png"), style: .bordered, target: self, action: #selector(forward))
+            forwardButton = UIBarButtonItem(image: image2, style: .bordered, target: self, action: #selector(forward))
+
         //UIImage(named: "ForwardButton.png")
             forwardButton .isEnabled = false
             flexForward = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.flexibleSpace, target: nil, action: nil)
