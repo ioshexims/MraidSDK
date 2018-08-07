@@ -1100,9 +1100,12 @@ public class SKMRAIDView2: UIView,UIWebViewDelegate,SKMRAIDModalViewControllerDe
         {
             if isInterstitial
             {
-                var closeButtonImage = UIImage()
-                closeButtonImage = UIImage(named: "close.png")!
-                closeEventRegion.setBackgroundImage(closeButtonImage, for: .normal)
+                //var closeButtonImage = UIImage()
+                //closeButtonImage = UIImage(named: "close.png")!
+                let image3 = UIImage(named: "close.png", in: Bundle(for: SKMRAIDView2.self), compatibleWith: nil)
+
+             
+                closeEventRegion.setBackgroundImage(image3, for: .normal)
             }
         }
         closeEventRegion.frame = CGRect(x: 0, y: 0, width: 50, height: 50)
